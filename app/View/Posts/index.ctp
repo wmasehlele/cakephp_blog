@@ -23,6 +23,13 @@
             </td>
             <td>
                 <?php
+                    echo $this->Form->postLink(
+                        'Delete',
+                        array('action' => 'delete', $post['Post']['id']),
+                        array('confirm' => 'You are about to delete a post, click OK to continue')
+                    );
+                ?>              
+                <?php
                     echo $this->Html->link(
                         'Edit',
                         array('action' => 'edit', $post['Post']['id'])
